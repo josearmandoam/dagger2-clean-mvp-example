@@ -15,35 +15,15 @@
  */
 package es.voghdev.prjdagger2;
 
-import junit.framework.Assert;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import es.voghdev.prjdagger2.datasource.db.UserDBEntry;
 import es.voghdev.prjdagger2.global.model.User;
-import es.voghdev.prjdagger2.usecase.GetUsers;
 
-import static junit.framework.Assert.assertNull;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class UserDBTest extends BaseUnitTest {
