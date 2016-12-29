@@ -18,6 +18,8 @@ package es.voghdev.prjdagger2.global;
 import android.app.Application;
 import android.support.annotation.VisibleForTesting;
 
+import com.raizlabs.android.dbflow.config.FlowConfig;
+import com.raizlabs.android.dbflow.config.FlowManager;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -39,6 +41,11 @@ public class App extends Application {
         super.onCreate();
         initializeDependencyInjector();
         initializeImageCache();
+        initializeDatabase();
+    }
+
+    private void initializeDatabase() {
+        FlowManager.init(new FlowConfig.Builder(this).build());
     }
 
     private void initializeDependencyInjector() {

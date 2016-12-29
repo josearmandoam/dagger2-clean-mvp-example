@@ -17,10 +17,12 @@ package es.voghdev.prjdagger2.datasource.db;
 
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import es.voghdev.prjdagger2.global.model.User;
 
+@Table(database = AppDatabase.class)
 public class UserDBEntry extends BaseModel {
     @PrimaryKey
     @Column
